@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/*横並びレイアウト*/
+.nav__list{
+    display: flex;
+    list-style: none;
+    /* ↓flexが当たっていないと適用できない↓ */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.nav__item a{
+    color: #ff0000;
+    text-decoration: none;
+}
+
+@media screen and (max-width:767px) {
+    .nav__list{
+        flex-direction: column;
+    }
+    .nav__item a{
+        color: #f2a100;
+    }
+}
