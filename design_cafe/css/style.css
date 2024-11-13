@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+main{
+    background-color: #e8d9bf;
+}
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.title img{
+    display: block;
+    height: 78px;
+}
+.text{
+    font-feature-settings: "palt";
+}
+
+.header__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2.76%;
+    padding-right: 7.28%;
+    padding-top: 15px;
+    position: absolute;
+    width: 100%;
+}
+.header__nav ul{
+    display: flex;
+    gap: 70px;
+}
+.header__nav li{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+    "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    color: #ffffff;
+}
+.logo{
+    width: 227px;
+}
+.mainvisual img{
+    width: 100%;
+}
+.intro-wrapper{
+    max-width: 890px;
+    margin: 0 auto;
+    padding: 105px 10px 95px 10px;
+    text-align: center;
+}
+.intro__subtitle{
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.intro__title{
+    font-size: 82px;
+    letter-spacing: 0.09em;
+    line-height: 1.17;
+    margin-bottom: 35px;
+}
+.intro__text{
+    font-size: 23px;
+    letter-spacing: 0.1em;
+    line-height: 1.65;
+}
+.about__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 108px;
+}
+.about__img{
+    width: 50%;
+}
+.about__img img{
+    width: 500px;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 0 0 82px 0;
+}
+.about__text-area{
+    width: 50%;
+    padding-left: 7.2%;
+}
+.about__title{
+    margin-bottom: 53px;
+}
+.about__sub-title{
+    font-size: 44px;
+    line-height: 1.38;
+    margin-bottom: 34px;
+}
+.about__text{
+    font-size: 16px;
+    line-height: 1.62;
+}
+.menu__inner{
+    margin-bottom: 96px;
+}
+.menu__title img{
+    margin: 0 auto 48px auto;
+}
+.menu__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+.menu__img{
+    width: 100%;
+    border-radius: 0 41px 0 0;
+}
+.menu__heading{
+    font-size: 38px;
+    color: #d30202;
+    margin-top: -10px;
+    margin-bottom: 24px;
+}
+.menu__text{
+    font-size: 17px;
+    line-height: 1.47;
+}
+.gallery__wrapper{
+    width: 100%;
+    margin-bottom: 72px;
+}
+.gallery__title img{
+    margin: 0 auto 24px auto;
+}
+.gallery__list{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.gallery__item{
+    width: 20%;
+}
+.gallery__item img{
+    width: 100%;
+}
+.event__inner{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 78px;
+}
+.event__title img{
+    margin: 0 auto 38px auto;
+}
+.event__content{
+    max-width: 1000px;
+    background-color: #ffffff;
+    border: 3px solid #4f260b;
+}
+.event__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 40px 10px 40px 10px;
+    margin: 0 auto;
+}
+.event__item{
+    width: 670px;
+    display: block;
+    margin: 0 auto;
+}
+.event__item a{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+.event__date,
+.event__text{
+    font-size: 23px;
+}
+.access__title img{
+    margin: 0 auto 42px auto;
+}
+iframe{
+    aspect-ratio: 640 / 157;
+    width: 100%;
+    height: 471px;
+    filter: grayscale(100%) invert(92%) contrast(83%);
+}
+.top__btn{
+    width: 125px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.footer__inner{
+    display: flex;
+    align-items: flex-start;
+    gap: 65px;
+    padding-top: 78px;
+    margin-bottom: 78px;
+}
+.footer__logo img{
+    width: 226px;
+}
+.footer__address{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.footer__address p{
+    font-size: 20px;
+    color: #000000;
+}
+.copyright{
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 78px;
+}
+
+@media screen and (max-width:1000px) {
+    .header__nav ul{
+        display: flex;
+        gap: 15px;
+    }    
+}
