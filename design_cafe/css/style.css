@@ -32,6 +32,7 @@ main{
     padding-top: 15px;
     position: absolute;
     width: 100%;
+    z-index: 9997;
 }
 .header__nav ul{
     display: flex;
@@ -506,5 +507,15 @@ iframe{
         text-align: center;
         padding-bottom: 30px;
     }
-    
+}
+
+.slick-dots{
+    bottom: 5px;
+}
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before{
+    color: #ffffff;
+}
+.slick-dotted.slick-slider{
+    margin-bottom: 0;
 }
