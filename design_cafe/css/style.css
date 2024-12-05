@@ -519,3 +519,6 @@ iframe{
 .slick-dotted.slick-slider{
     margin-bottom: 0;
 }
+.lb-data .lb-details{
+    display: none;
+}
