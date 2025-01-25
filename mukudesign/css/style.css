@@ -1,0 +1,352 @@
+@charset "UTF-8";
+
+/* -------------------------------
+mv
+------------------------------- */
+#mainvisual{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.mainvisual{
+    display: block;
+    width: 100%;
+    padding: 0 4% 32px 4%;
+}
+.mainvisual__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+}
+.mainvisual__item{
+    display: block;
+    width: 100%;
+}
+.mainvisual__item img{
+    border-radius: 15px;
+}
+.mainvisual__btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+/* -------------------------------
+mukudesign
+------------------------------- */
+.muku-section{
+    display: block;
+    width: 100%;
+    margin-top: 80px;
+}
+.muku-title{
+    text-align: center;
+}
+.muku-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+.muku-innner__text .muku-innner__img{
+    width: 50%;
+}
+.muku-innner__text{
+    padding-right: 7.6%;
+}
+.ashirai-katachi{
+    width: 100%;
+}
+.muku-subtitle{
+    text-align: left;
+}
+.muku-text{
+    text-align: left;
+    padding-top: 32px;
+}
+
+/* -------------------------------
+profile
+------------------------------- */
+.profile-section{
+    display: block;
+    width: 100%;
+    margin-top: 136px;
+}
+.profile-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-inner__img .profile-inner__text{
+    display: block;
+    width: 50%;
+}
+.profile-inner__img{
+    position: relative;
+
+}
+.profile-bg__cercle{
+    display: block;
+    width: 309px;
+    position: relative;
+    left: -70%;
+    top: -96px;
+    z-index: 1;
+    animation: rotate_anime 50s infinite;
+}
+@keyframes rotate_anime{
+    to{
+        transform: rotate(360deg);
+    }
+}
+.profile-img{
+    display: block;
+    width: 300px;
+    position: absolute;
+    left: -10%;
+    top: 0;
+    z-index: 10;
+}
+.profile-inner__text{
+    padding-left: 7%;
+    z-index: 10;
+}
+.profile-title .profile-designer .profile-JaName{
+    text-align: left;
+}
+.profile-designer{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 32px;
+}
+.profile-name{
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 8px;
+}
+.profile-JaName{
+    font-size: 16px;
+    letter-spacing: 0.18em;
+    padding-top: 8px;
+}
+.profile__btn{
+    padding-top: 48px;
+}
+.profile-bg__line{
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.ashirai_nami{
+    display: block;
+    width: 300px;
+    position: relative;
+    top: -120px;
+    float: right;
+    z-index: -1;
+}
+
+/* -------------------------------
+service
+------------------------------- */
+.service-section{
+    display: block;
+    width: 100%;
+    margin-top: 144px;
+}
+.service-title{
+    text-align: center;
+}
+.service-tab__img{
+    display: block;
+    width: 615px;
+    margin: 0 auto;
+}
+.service-text{
+    display: block;
+    width: 575px;
+    line-height: 2.25;
+    text-align: left;
+    margin: 80px auto 0 auto;
+}
+.service-tab{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.tab{
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e0ded7;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+    float: left;
+    transition: all 0.2s ease;
+    position: relative;
+    top: 460px;
+    left: 20%;
+}
+.tab:not(:first-of-type)::before{
+    display: inline-block;
+    font-size: 24px;
+    content: '・';
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.tab:hover{
+    opacity: 0.75;
+}
+input[name="tab"]{
+    display: none;
+}
+.service-tab__content{
+    display: none;
+    clear: both;
+    overflow: hidden;
+    transition: 0.2s opacity;
+}
+#tab-design:checked ~ #service-tab__design,
+#tab-cording:checked ~ #service-tab__cording,
+#tab-movie:checked ~ #service-tab__movie,
+#tab-illust:checked ~ #service-tab__illust{
+    display: block;
+}
+.service-tab input:checked + .tab{
+    color: #452e13;
+}
+.service-blue__img{
+    display: block;
+    height: 0;
+    margin: 0 auto;
+}
+.service-blue__img svg{
+    width: 180px;
+    position: relative;
+    top: -400px;
+    z-index: -1;
+}
+.service-pink__img{
+    display: block;
+    height: 0;
+    margin: 0 auto;
+}
+.service-pink__img svg{
+    width: 200px;
+    position: relative;
+    top: -250px;
+    right: -850px;
+    z-index: -1;
+}
+
+/* -------------------------------
+work
+------------------------------- */
+.work-section{
+    display: block;
+    width: 100%;
+    margin-top: 120px;
+}
+.work-list__top{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 48px;
+    padding-top: 48px;
+}
+.work-list__top--center{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 48px;
+    padding-top: 48px;
+}
+.work-list__top--under{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 48px;
+    padding-top: 48px;
+}
+.work-img img{
+    width: 300px;
+    border-radius: 15px;
+}
+.work-item{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.work-label{
+    font-size: 16px;
+    font-weight: bold;
+}
+.work-shopname,
+.work-itemname{
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    padding-top: 16px;
+}
+.work-yellow__img{
+    display: block;
+    height: 0;
+    margin: 0 auto;
+}
+.work-yellow__img svg{
+    width: 300px;
+    position: relative;
+    top: -1200px;
+    float: right;
+    overflow: hidden;
+    z-index: -1;
+}
+.work-pink__img{
+    display: block;
+    height: 0;
+    margin: 0 auto;
+}
+.work-pink__img svg{
+    width: 160px;
+    position: relative;
+    top: -550px;
+    right: -1050px;
+    z-index: -1;
+}
+.work-green__img{
+    display: block;
+    height: 0;
+    margin: 0 auto;
+}
+.work-green__img svg{
+    width: 300px;
+    position: relative;
+    top: -350px;
+    z-index: -1;
+}
+.work-blue__img{
+    display: block;
+    height: 0;
+    margin: 0 auto;
+}
+.work-blue__img svg{
+    width: 150px;
+    position: relative;
+    top: -50px;
+    z-index: -1;
+}
+.work__btn{
+    width: 200px;
+    padding-top: 96px;
+    margin: 0 auto;
+}
+
