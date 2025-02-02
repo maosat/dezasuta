@@ -58,7 +58,7 @@
                 </ul>
             </nav>
             <div class="nav-insta">
-                <a href="https://www.instagram.com/design.muku">
+                <a href="https://www.instagram.com/design.muku" target="_blank">
                     <img src="./img/insta.png" alt="インスタグラムアイコン">
                 </a>
             </div>
@@ -83,15 +83,16 @@
             <div class="mainvisual__btn">
                 <button class="mainvisual__btn--prev">
                     <div class="btn-prev__inner">
-                        <div class="arrow-left">
-                            <img src="./img/btn_left.svg" alt="左矢印">
-                        </div>
                         <div class="btn btn__rotate">
                             <a href="#">
                                 <span class="btn__prev-text--default">PREV</span>
                                 <span class="btn__prev-text--fterRotate">PREV</span>
                             </a>
-                        </div>    
+                        </div>
+                        <div class="arrow-left">
+                            <img class="arrow-left__before" src="./img/btn_left.svg" alt="左矢印">
+                            <img class="arrow-left__after" src="./img/btn_left.svg" alt="左矢印">
+                        </div>
                     </div>
                     <div class="line-left">
                         <div class="line-left__inner"></div>
@@ -106,7 +107,8 @@
                             </a>
                         </div>
                         <div class="arrow-right">
-                            <img src="./img/btn_right.svg" alt="右矢印">
+                            <img class="arrow-right__before" src="./img/btn_right.svg" alt="右矢印">
+                            <img class="arrow-right__after" src="./img/btn_right.svg" alt="右矢印">
                         </div>    
                     </div>
                     <div class="line-right">
@@ -191,7 +193,8 @@
                                     </a>
                                 </div>
                                 <div class="arrow-right">
-                                    <img src="./img/btn_right.svg" alt="右矢印">
+                                    <img class="arrow-right__before" src="./img/btn_right.svg" alt="右矢印">
+                                    <img class="arrow-right__after" src="./img/btn_right.svg" alt="右矢印">
                                 </div>
                             </button>
                             <div class="line-right">
@@ -303,8 +306,8 @@
                     <h2 class="title work-title">
                         WORK
                     </h2>
-                    <ul class="work-list__top">
-                        <li class="work-item work-item__top">
+                    <ul class="work-list">
+                        <li class="work-item">
                             <div class="work-img">
                                 <a href="work/bluecafe.html">
                                     <img src="./img/work_bluecafe.jpg" alt="bluecafe様ショップカード">
@@ -316,7 +319,7 @@
                                 <p class="work-itemname">ロゴマーク、ショップカード</p>
                             </div>
                         </li>
-                        <li class="work-item work-item__top">
+                        <li class="work-item">
                             <div class="work-img">
                                 <a href="work/sou.html">
                                     <img src="./img/work_sou.jpg" alt="蒼様ロゴマーク">
@@ -328,9 +331,7 @@
                                 <p class="work-itemname">ロゴマーク</p>
                             </div>
                         </li>
-                    </ul>
-                    <ul class="work-list__top--center">
-                        <li class="work-item work-item__center">
+                        <li class="work-item">
                             <div class="work-img">
                                 <a href="work/trrrrip.html">
                                     <img src="./img/work_trrrrip.jpg" alt="trrrrip様バナー">
@@ -342,7 +343,7 @@
                                 <p class="work-itemname">広告バナー</p>
                             </div>
                         </li>
-                        <li class="work-item work-item__center">
+                        <li class="work-item">
                             <div class="work-img">
                                 <a href="work/dezasta.html">
                                     <img src="./img/work_dezasta.jpg" alt="デザスタ様モバイルバナー">
@@ -354,7 +355,7 @@
                                 <p class="work-itemname">広告バナー</p>
                             </div>
                         </li>
-                        <li class="work-item work-item__center">
+                        <li class="work-item">
                             <div class="work-img">
                                 <a href="work/workers.html">
                                     <img src="./img/work_workers.jpg" alt="WORKERS様Webサイトデザイン">
@@ -366,9 +367,7 @@
                                 <p class="work-itemname">Webサイト</p>
                             </div>
                         </li>
-                    </ul>
-                    <ul class="work-list__top--under">
-                        <li class="work-item work-item__under">
+                        <li class="work-item">
                             <div class="work-img">
                                 <a href="work/lifeheirdesign.html">
                                     <img src="./img/work_heirdesign.jpg" alt="LIFE hair design様Webサイトデザイン">
@@ -380,7 +379,7 @@
                                 <p class="work-itemname">Webサイト</p>
                             </div>
                         </li>
-                        <li class="work-item work-item__under">
+                        <li class="work-item">
                             <div class="work-img">
                                 <a href="work/mukudesign.html">
                                     <img src="./img/work_muku.jpg" alt="mukudesignポートフォリオサイト">
@@ -405,19 +404,6 @@
                             <g id="work-yellow">
                                 <path class="work-yellow" 
                                 d="M11.58,217.32C.06,207.41-3.42,191.89,3.66,178.61c8.44-17.17,28.11-29.06,44.96-38.25C116.44,103.21,184,65.71,251.72,28.43,276.84,15.4,304.65-.08,333.34,0c27.81.17,43.83,22.36,41.38,49.45-1.66,21.83-10.8,42.44-20.26,61.98-15.64,31.07-33.2,60.77-50.25,90.97-46.33,81.2-82.49,112.06-177.63,69.81-21.67-9.05-42.52-18.59-63.71-27.82-17.03-7.75-37.93-15.16-51.09-26.89l-.19-.17Z"/>
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="work-pink__img">
-                        <svg id="work-pink__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 153.44 106.66">
-                            <defs>
-                                <style>
-                                    .work-pink{fill:#d8bad5;}
-                                </style>
-                            </defs>
-                            <g id="work-pink">
-                                <path class="work-pink" 
-                                d="M.1,51.54C-2.72,26.56,52.23,5.07,91.84.59s58.66,17.14,61.49,42.12c2.83,24.98-47.88,59.07-87.49,63.55C26.23,110.75,2.93,76.52.1,51.54Z"/>
                             </g>
                         </svg>
                     </div>
@@ -457,7 +443,8 @@
                             </a>
                         </div>
                         <div class="arrow-right">
-                            <img src="./img/btn_right.svg" alt="右矢印">
+                            <img class="arrow-right__before" src="./img/btn_right.svg" alt="右矢印">
+                            <img class="arrow-right__after" src="./img/btn_right.svg" alt="右矢印">
                         </div>
                     </button>
                     <div class="line-right">
@@ -512,7 +499,8 @@
                             </a>
                         </div>
                         <div class="arrow-right">
-                            <img src="./img/btn_right.svg" alt="右矢印">
+                            <img class="arrow-right__before" src="./img/btn_right.svg" alt="右矢印">
+                            <img class="arrow-right__after" src="./img/btn_right.svg" alt="右矢印">
                         </div>
                     </button>
                     <div class="line-right">
@@ -558,14 +546,14 @@
                         </a>
                     </li>
                     <li class="footer__item">
-                        <a href="privacypolicy.html">
+                        <a href="privacy-policy.html">
                             <span class="footer__text text__gray">Privacy Policy</span>
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="footer-insta">
-                <a href="https://www.instagram.com/design.muku">
+                <a href="https://www.instagram.com/design.muku" target="_blank">
                     <img src="./img/insta.png" alt="インスタグラムアイコン">
                 </a>
             </div>
