@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mukudesign</title>
     <link rel="stylesheet" href="https://use.typekit.net/dqy5apx.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -21,7 +25,7 @@
             <nav class="header__nav">
                 <ul>
                     <li>
-                        <a href="index.html" class="nav__btn">
+                        <a href="#mukudesign" class="nav__btn">
                             <span class="nav__default">muku design</span>
                             <span class="nav__afterRotate">muku design</span>
                             <span class="nav__bg" role="presentation"></span>
@@ -35,7 +39,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="index.html#service" class="nav__btn">
+                        <a href="#service" class="nav__btn">
                             <span class="nav__default">SERVICE</span>
                             <span class="nav__afterRotate">できること</span>
                             <span class="nav__bg" role="presentation"></span>
@@ -63,6 +67,71 @@
                 </a>
             </div>
         </div>
+
+        <div class="sp-header pc-none">
+            <div class="sp-header__btn">
+                <div class="sp-nav__insta">
+                    <a href="https://www.instagram.com/design.muku" target="_blank">
+                        <img src="./img/sp-insta.png" alt="インスタグラムアイコン">
+                    </a>
+                </div>
+                <div class="sp-nav__hamburger">
+                    <span class="hamburger"></span>
+                    <div class="sp-nav__line--left"></div>
+                    <div id="hamburger__text" class="text sp-header__text">
+                        MENU
+                    </div>
+                    <div class="sp-nav__line--right"></div>
+                </div>
+                <div class="sp-nav__top">
+                    <a class="sp-nav__top-inner" href="#header">
+                        <img src="./img/top_btn.svg" alt="">
+                        <div class="text sp-header__text">
+                            TOP
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <nav class="sp-header__nav">
+                <h1 class="sp-nav__logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.png" alt="logo">
+                    </a>
+                </h1>    
+                <ul class="sp-nav__list">
+                    <li class="sp-nav__item">
+                        <a href="#mukudesign">
+                            <div class="text sp-nav__text--en">muku design</div>
+                            <div class="text sp-nav__text--ja">muku design</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="profile.html">
+                            <div class="text sp-nav__text--en">PROFILE</div>
+                            <div class="text sp-nav__text--ja">プロフィール</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="#service">
+                            <div class="text sp-nav__text--en">SERVICE</div>
+                            <div class="text sp-nav__text--ja">できること</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="work.html">
+                            <div class="text sp-nav__text--en">WORK</div>
+                            <div class="text sp-nav__text--ja">作品一覧</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="contact.html">
+                            <div class="text sp-nav__text--en">CONTACT</div>
+                            <div class="text sp-nav__text--ja sp-nav__text--last">お問い合わせ</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -72,7 +141,7 @@
                 <li class="breadcrumb__line">PRIVACY POLICY</li>
             </ol>
         </nav>
-        <section id="privacy-page">
+        <section id="privacy-page" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="wrapper privacy-page">
                 <div class="privacy-page__wrapper">
                     <h2 class="title privacy-page__title">

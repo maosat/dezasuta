@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mukudesign</title>
     <link rel="stylesheet" href="https://use.typekit.net/dqy5apx.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -21,7 +25,7 @@
             <nav class="header__nav">
                 <ul>
                     <li>
-                        <a href="index.html" class="nav__btn">
+                        <a href="#mukudesign" class="nav__btn">
                             <span class="nav__default">muku design</span>
                             <span class="nav__afterRotate">muku design</span>
                             <span class="nav__bg" role="presentation"></span>
@@ -35,7 +39,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="index.html#service" class="nav__btn">
+                        <a href="#service" class="nav__btn">
                             <span class="nav__default">SERVICE</span>
                             <span class="nav__afterRotate">できること</span>
                             <span class="nav__bg" role="presentation"></span>
@@ -63,6 +67,71 @@
                 </a>
             </div>
         </div>
+
+        <div class="sp-header pc-none">
+            <div class="sp-header__btn">
+                <div class="sp-nav__insta">
+                    <a href="https://www.instagram.com/design.muku" target="_blank">
+                        <img src="./img/sp-insta.png" alt="インスタグラムアイコン">
+                    </a>
+                </div>
+                <div class="sp-nav__hamburger">
+                    <span class="hamburger"></span>
+                    <div class="sp-nav__line--left"></div>
+                    <div id="hamburger__text" class="text sp-header__text">
+                        MENU
+                    </div>
+                    <div class="sp-nav__line--right"></div>
+                </div>
+                <div class="sp-nav__top">
+                    <a class="sp-nav__top-inner" href="#header">
+                        <img src="./img/top_btn.svg" alt="">
+                        <div class="text sp-header__text">
+                            TOP
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <nav class="sp-header__nav">
+                <h1 class="sp-nav__logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.png" alt="logo">
+                    </a>
+                </h1>    
+                <ul class="sp-nav__list">
+                    <li class="sp-nav__item">
+                        <a href="#mukudesign">
+                            <div class="text sp-nav__text--en">muku design</div>
+                            <div class="text sp-nav__text--ja">muku design</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="profile.html">
+                            <div class="text sp-nav__text--en">PROFILE</div>
+                            <div class="text sp-nav__text--ja">プロフィール</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="#service">
+                            <div class="text sp-nav__text--en">SERVICE</div>
+                            <div class="text sp-nav__text--ja">できること</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="work.html">
+                            <div class="text sp-nav__text--en">WORK</div>
+                            <div class="text sp-nav__text--ja">作品一覧</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="contact.html">
+                            <div class="text sp-nav__text--en">CONTACT</div>
+                            <div class="text sp-nav__text--ja sp-nav__text--last">お問い合わせ</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -72,7 +141,7 @@
                 <li class="breadcrumb__line">PROFILE</li>
             </ol>
         </nav>
-        <section id="profile-page">
+        <section id="profile-page" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="wrapper profile-page">
                 <div class="profile-page__wrapper">
                     <h2 class="title profile-page__title">
@@ -110,7 +179,7 @@
             </div>
         </section>
 
-        <section id="profilepage-about">
+        <section id="profilepage-about" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="wrapper profilepage-about__section">
                 <h2 class="title profile-page__title profilepage-about__title">
                     ABOUT
@@ -119,9 +188,9 @@
                     <p>
                         「人を笑顔にできる仕事がしたい」<br>
                         就活時代から変わらない私の大切な想いです。<br>
-                        アパレル販売員、映像制作会社のアシスタントディレクター、<br>
+                        アパレル販売員、<br class="pc-none">映像制作会社のアシスタントディレクター、<br>
                         EC運用会社でのディレクター経験を通して、<br>
-                        「笑顔」をお客様と共有し、周りに伝染させることができること、<br>
+                        「笑顔」をお客様と共有し、<br class="pc-none">周りに伝染させることができること、<br>
                         デザインの力で商品や人の魅力を<br>
                         さらに伝えることができることを実感しました。<br>
                         大切な「想い」をカタチにして、<br>
@@ -132,14 +201,14 @@
             </div>
         </section>
 
-        <section id="profilepage-skill">
+        <section id="profilepage-skill" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="wrapper profilepage-skill__section">
                 <h2 class="title profile-page__title profilepage-skill__title">
                     SKILL
                 </h2>
 
                 <div class="profilepage-graph__inner">
-                    <div class="profilepage-graph__list">
+                    <div class="profilepage-graph__list ani">
                         <ul class="profilepage-graph__list--left">
                             <li class="profilepage-graph__item">
                                 <p class="profilepage-graph__text">Photoshop</p>
@@ -257,7 +326,7 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="wrapper contact-section">
                 <h2 class="title contact-title">
                     CONTACT

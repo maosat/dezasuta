@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mukudesign</title>
     <link rel="stylesheet" href="https://use.typekit.net/dqy5apx.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/script.js"></script>
 </head>
 
 <body>
@@ -21,7 +25,7 @@
             <nav class="header__nav">
                 <ul>
                     <li>
-                        <a href="../index.html" class="nav__btn">
+                        <a href="../index.html#mukudesign" class="nav__btn">
                             <span class="nav__default">muku design</span>
                             <span class="nav__afterRotate">muku design</span>
                             <span class="nav__bg" role="presentation"></span>
@@ -63,8 +67,73 @@
                 </a>
             </div>
         </div>
-    </header>
 
+        <div class="sp-header pc-none">
+            <div class="sp-header__btn">
+                <div class="sp-nav__insta">
+                    <a href="https://www.instagram.com/design.muku" target="_blank">
+                        <img src="../img/sp-insta.png" alt="インスタグラムアイコン">
+                    </a>
+                </div>
+                <div class="sp-nav__hamburger">
+                    <span class="hamburger"></span>
+                    <div class="sp-nav__line--left"></div>
+                    <div id="hamburger__text" class="text sp-header__text">
+                        MENU
+                    </div>
+                    <div class="sp-nav__line--right"></div>
+                </div>
+                <div class="sp-nav__top">
+                    <a class="sp-nav__top-inner" href="#header">
+                        <img src="../img/top_btn.svg" alt="">
+                        <div class="text sp-header__text">
+                            TOP
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <nav class="sp-header__nav">
+                <h1 class="sp-nav__logo">
+                    <a href="../index.html">
+                        <img src="../img/logo.png" alt="logo">
+                    </a>
+                </h1>    
+                <ul class="sp-nav__list">
+                    <li class="sp-nav__item">
+                        <a href="../index.html#mukudesign">
+                            <div class="text sp-nav__text--en">muku design</div>
+                            <div class="text sp-nav__text--ja">muku design</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="../profile.html">
+                            <div class="text sp-nav__text--en">PROFILE</div>
+                            <div class="text sp-nav__text--ja">プロフィール</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="../index.html#service">
+                            <div class="text sp-nav__text--en">SERVICE</div>
+                            <div class="text sp-nav__text--ja">できること</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="../work.html">
+                            <div class="text sp-nav__text--en">WORK</div>
+                            <div class="text sp-nav__text--ja">作品一覧</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="../contact.html">
+                            <div class="text sp-nav__text--en">CONTACT</div>
+                            <div class="text sp-nav__text--ja sp-nav__text--last">お問い合わせ</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
     <main>
         <nav class="breadcrumb__wrapper">
             <ol class="breadcrumb">
@@ -73,18 +142,13 @@
                 <li class="breadcrumb__line">Blue Cafe</li>
             </ol>
         </nav>
-        <section id="work-post">
-            <div class="work-post__wrapper">
-                <h2 class="title work-post__title">
-                    WORK
-                </h2>
-                <h4 class="ja-title work-post__ja-title">
-                    作品一覧
-                </h4>
-            </div>
-
+        <section id="work-post" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="work-post__inner">
                 <div class="work-post__split">
+                    <div class="work-post__sp-img pc-none">
+                        <img src="../img/work_bluecafe.jpg" alt="bluecafeショップカード">
+                    </div>    
+
                     <div class="work-post__left">
                         <div class="work-post__left-innner">
                             <div class="work-post__category">
@@ -117,7 +181,7 @@
                     <div class="work-post__right">
                         <div class="work-post__right-innner">
                             <div class="work-post__img">
-                                <img src="../img/work_bluecafe.jpg" alt="bluecafeショップカード">
+                                <img class="sp-none" src="../img/work_bluecafe.jpg" alt="bluecafeショップカード">
                                 <img src="../img/work_bluecafe.jpg" alt="bluecafeショップカード">
                                 <img src="../img/work_bluecafe_img.jpg" alt="bluecafeショップカード">
                             </div>    
@@ -126,9 +190,30 @@
                 </div>    
             </div>
 
+            <button class="work-post__btn--bglist pc-none work-post__btn--bglist-sp">
+                <div class="btn-bglist__inner">
+                    <div class="btn btn__rotate btn-bglist">
+                        <a href="../work.html">
+                            <span class="btn__bglist-text--default">Back to list</span>
+                            <span class="btn__bglist-text--fterRotate">一覧に戻る</span>
+                            <svg id="btn-bglist__sp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 195.58 168.01">
+                                <defs>
+                                    <style>
+                                        .btn-bglist__sp-img{fill:#d9dbb6;}
+                                    </style>
+                                </defs>
+                                <g id="btn-bglist__sp-img">
+                                    <path class="btn-bglist__sp-img" 
+                                    d="M192.93,126.87c-9.46,21.51-34.72,23.6-56.7,26.68-22.96,3.57-45.75,7.56-68.39,12.5C13.15,178.72,1.17,127.28.06,84.78-.67,51.13,5.02,4.41,46.19.19c19.45-1.64,37.45,7.89,54.38,16.77,27.57,18.85,61.03,32.92,80.97,60.33,4.29,6.03,7.77,12.58,11.2,19.14,3.37,9.74,4.08,21.33.18,30.44Z"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>    
+                </div>
+            </button>
             <div class="work-post__btn">
                 <button class="work-post__btn--prev">
-                    <div class="btn-prev__inner">
+                    <div class="btn-prev__inner workpage-btn-prev__inner">
                         <div class="arrow-left">
                             <img class="arrow-left__before" src="../img/btn_left.svg" alt="左矢印">
                             <img class="arrow-left__after" src="../img/btn_left.svg" alt="左矢印">
@@ -144,7 +229,7 @@
                         <div class="line-left__inner"></div>
                     </div>
                 </button>
-                <button class="work-post__btn--bglist">
+                <button class="work-post__btn--bglist sp-none">
                     <div class="btn-bglist__inner">
                         <div class="btn btn__rotate btn-bglist">
                             <a href="../work.html">
@@ -166,7 +251,7 @@
                     </div>
                 </button>
                 <button class="work-post__btn--next">
-                    <div class="btn-next__inner">
+                    <div class="btn-next__inner workpage-btn-next__inner">
                         <div class="btn btn__rotate">
                             <a href="./sou.html">
                                 <span class="btn__next-text--default">NEXT</span>
@@ -185,13 +270,13 @@
             </div> 
         </section>
 
-        <section id="contact">
+        <section id="contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="wrapper contact-section">
                 <h2 class="title contact-title">
                     CONTACT
                 </h2>
                 <p class="text contact-text">
-                    制作のご依頼やご相談はこちらからお問合せください。
+                    制作のご依頼やご相談は<br class="pc-none">こちらからお問合せください。
                 </p>
                 <div class="contact-img">
                     <svg id="contact-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 301 301">

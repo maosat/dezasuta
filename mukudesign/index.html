@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mukudesign</title>
     <link rel="stylesheet" href="https://use.typekit.net/dqy5apx.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -63,31 +70,98 @@
                 </a>
             </div>
         </div>
+
+        <div class="sp-header pc-none">
+            <div class="sp-header__btn">
+                <div class="sp-nav__insta">
+                    <a href="https://www.instagram.com/design.muku" target="_blank">
+                        <img src="./img/sp-insta.png" alt="インスタグラムアイコン">
+                    </a>
+                </div>
+                <div class="sp-nav__hamburger">
+                    <span class="hamburger"></span>
+                    <div class="sp-nav__line--left"></div>
+                    <div id="hamburger__text" class="text sp-header__text">
+                        MENU
+                    </div>
+                    <div class="sp-nav__line--right"></div>
+                </div>
+                <div class="sp-nav__top">
+                    <a class="sp-nav__top-inner" href="#header">
+                        <img src="./img/top_btn.svg" alt="">
+                        <div class="text sp-header__text">
+                            TOP
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <nav class="sp-header__nav">
+                <h1 class="sp-nav__logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.png" alt="logo">
+                    </a>
+                </h1>    
+                <ul class="sp-nav__list">
+                    <li class="sp-nav__item">
+                        <a href="#mukudesign">
+                            <div class="text sp-nav__text--en">muku design</div>
+                            <div class="text sp-nav__text--ja">muku design</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="profile.html">
+                            <div class="text sp-nav__text--en">PROFILE</div>
+                            <div class="text sp-nav__text--ja">プロフィール</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="#service">
+                            <div class="text sp-nav__text--en">SERVICE</div>
+                            <div class="text sp-nav__text--ja">できること</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="work.html">
+                            <div class="text sp-nav__text--en">WORK</div>
+                            <div class="text sp-nav__text--ja">作品一覧</div>
+                        </a>
+                    </li>
+                    <li class="sp-nav__item">
+                        <a href="contact.html">
+                            <div class="text sp-nav__text--en">CONTACT</div>
+                            <div class="text sp-nav__text--ja sp-nav__text--last">お問い合わせ</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section id="mainvisual">
             <div class="mainvisual">
-                <ul class="mainvisual__list">
-                    <li class="mainvisual__item">
+                <ul class="mainvisual__list slider">
+                    <li class="mainvisual__item slide">
                         <img src="./img/mv_usagi.jpg" alt="うさぎのイラスト">
                     </li>
-                    <li class="mainvisual__item">
+                    <li class="mainvisual__item slide">
+                        <img src="./img/mv_usagi.jpg" alt="うさぎのイラスト">
+                    </li>
+                    <li class="mainvisual__item slide">
                         <img src="./img/mv_poodle.jpg" alt="mukudesignについて">
                     </li>
-                    <li class="mainvisual__item">
+                    <li class="mainvisual__item slide">
                         <img src="./img/mv_poodle.jpg" alt="トイプードルのイラスト">
                     </li>
                 </ul>
+                <div class="mv-pagination"></div>
             </div>
             <div class="mainvisual__btn">
                 <button class="mainvisual__btn--prev">
-                    <div class="btn-prev__inner">
+                    <div class="btn-prev__inner mainvisual__btn--innner">
                         <div class="btn btn__rotate">
-                            <a href="#">
-                                <span class="btn__prev-text--default">PREV</span>
-                                <span class="btn__prev-text--fterRotate">PREV</span>
-                            </a>
+                            <span class="btn__prev-text--default">PREV</span>
+                            <span class="btn__prev-text--fterRotate">PREV</span>
                         </div>
                         <div class="arrow-left">
                             <img class="arrow-left__before" src="./img/btn_left.svg" alt="左矢印">
@@ -99,12 +173,10 @@
                     </div>
                 </button>
                 <button class="mainvisual__btn--next">
-                    <div class="btn-next__inner">
+                    <div class="btn-next__inner mainvisual__btn--innner">
                         <div class="btn btn__rotate">
-                            <a href="#">
-                                <span class="btn__next-text--default">NEXT</span>
-                                <span class="btn__next-text--fterRotate">NEXT</span>
-                            </a>
+                            <span class="btn__next-text--default">NEXT</span>
+                            <span class="btn__next-text--fterRotate">NEXT</span>
                         </div>
                         <div class="arrow-right">
                             <img class="arrow-right__before" src="./img/btn_right.svg" alt="右矢印">
@@ -119,7 +191,7 @@
         </section>
     
         <section id="mukudesign">
-            <div class="wrapper muku-section">
+            <div class="wrapper muku-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                 <h2 class="title muku-title">
                     muku design
                 </h2>
@@ -170,15 +242,18 @@
             </div>
         </section>
 
-        <section id="profile">
+        <section id="profile" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="wrapper profile-section">
+                <h2 class="title profile-title pc-none">
+                    PROFILE
+                </h2>
                 <div class="profile-wrapper">
                     <div class="profile-inner profile-inner__img">
                         <img class="profile-bg__cercle" src="./img/ashirai_logo.png" alt="">
                         <img class="profile-img" src="./img/profile_top.png" alt="プロフィール写真">
                     </div>
                     <div class="profile-inner profile-inner__text">
-                        <h2 class="title profile-title">
+                        <h2 class="title profile-title sp-none">
                             PROFILE
                         </h2>
                         <p class="profile-designer">Designer</p>
@@ -224,20 +299,20 @@
             </div>
         </section>
 
-        <section id="service">
+        <section id="service" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="wrapper service-section">
                 <h2 class="title service-title">
                     SERVICE
                 </h2>
                 <div class="service-tab">
                     <input id="tab-design" type="radio" name="tab" checked>
-                    <label class="tab" for="tab-design">デザイン</label>
+                    <label class="tab tab-design" for="tab-design">デザイン</label>
                     <input id="tab-cording" type="radio" name="tab">
-                    <label class="tab" for="tab-cording">コーディング</label>
+                    <label class="tab tab-cording" for="tab-cording">コーディング</label>
                     <input id="tab-movie" type="radio" name="tab">
-                    <label class="tab" for="tab-movie">動画編集</label>
+                    <label class="tab tab-movie" for="tab-movie">動画編集</label>
                     <input id="tab-illust" type="radio" name="tab">
-                    <label class="tab" for="tab-illust">イラスト</label>
+                    <label class="tab tab-illust" for="tab-illust">イラスト</label>
 
                     <div id="service-tab__design" class="service-tab__content">
                         <img class="service-tab__img" src="./img/skill_design.png" alt="">
@@ -300,7 +375,7 @@
             </div>
         </section>
 
-        <section id="work">
+        <section id="work" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="wrapper work-section">
                 <div class="work-wrapper">
                     <h2 class="title work-title">
@@ -394,7 +469,7 @@
                     </ul>
                 </div>
                 <div class="work__ashirai">
-                    <div class="work-yellow__img">
+                    <div class="work-yellow__img sp-none">
                         <svg id="work-yellow__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.96 291.1">
                             <defs>
                                 <style>
@@ -454,13 +529,13 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="wrapper contact-section">
                 <h2 class="title contact-title">
                     CONTACT
                 </h2>
                 <p class="text contact-text">
-                    制作のご依頼やご相談はこちらからお問合せください。
+                    制作のご依頼やご相談は<br class="pc-none">こちらからお問合せください。
                 </p>
                 <div class="contact-img">
                     <svg id="contact-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 301 301">
