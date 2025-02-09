@@ -13,16 +13,23 @@ mv
     margin: 0 auto;
     padding: 0 4% 32px 4%;
 }
-.slide img{
-    width: 100%;
+/* ==========
+slick
+==========*/
+.slick-slide video{
     border-radius: 15px;
-    opacity: .3;
-    transform: scale(.8);
-    transform: opacity .5s, transform .5s;
+    transform: scale(0.8);
 }
-.slide .slick-center img{
+.slick-slide img{
     border-radius: 15px;
-    opacity: 1;
+    transform: scale(0.8);
+}
+.slick-active video{
+    border-radius: 15px;
+    transform: scale(1);
+}
+.slick-active img{
+    border-radius: 15px;
     transform: scale(1);
 }
 .mainvisual__btn{
@@ -31,6 +38,32 @@ mv
     justify-content: space-between;
     padding-left: 4%;
     padding-right: 4%;
+}
+.dots-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: -8px;
+}
+.dots-wrap li {
+    width: 20px;
+    height: 3px;
+    margin: 0 5px;
+    background: #e5e1da;
+    cursor: pointer;
+}
+.dots-wrap li:hover,
+.dots-wrap li.slick-active {
+    background: #452e13;
+}
+.dots-wrap li button {
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
 }
 /* -------------------------------
 mukudesign
@@ -595,10 +628,10 @@ profile-page
     transition: 1s all;
     opacity: 0;
 }
-.ani .move{
+.ani.move{
     opacity: 1;
 }
-.profilepage-graph .profilepage-graph__photoshop{
+.move .profilepage-graph .profilepage-graph__photoshop{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -614,7 +647,7 @@ profile-page
         width: 80%;
     }
 }
-.profilepage-graph .profilepage-graph__illustrator{
+.move .profilepage-graph .profilepage-graph__illustrator{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -630,7 +663,7 @@ profile-page
         width: 100%;
     }
 }
-.profilepage-graph .profilepage-graph__figma{
+.move .profilepage-graph .profilepage-graph__figma{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -646,7 +679,7 @@ profile-page
         width: 50%;
     }
 }
-.profilepage-graph .profilepage-graph__html{
+.move .profilepage-graph .profilepage-graph__html{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -662,7 +695,7 @@ profile-page
         width: 90%;
     }
 }
-.profilepage-graph .profilepage-graph__css{
+.move .profilepage-graph .profilepage-graph__css{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -678,7 +711,7 @@ profile-page
         width: 90%;
     }
 }
-.profilepage-graph .profilepage-graph__js{
+.move .profilepage-graph .profilepage-graph__js{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -694,7 +727,7 @@ profile-page
         width: 70%;
     }
 }
-.profilepage-graph .profilepage-graph__premia{
+.move .profilepage-graph .profilepage-graph__premia{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -710,7 +743,7 @@ profile-page
         width: 100%;
     }
 }
-.profilepage-graph .profilepage-graph__af{
+.move .profilepage-graph .profilepage-graph__af{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -726,7 +759,7 @@ profile-page
         width: 60%;
     }
 }
-.profilepage-graph .profilepage-graph__pagefly{
+.move .profilepage-graph .profilepage-graph__pagefly{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -742,7 +775,7 @@ profile-page
         width: 60%;
     }
 }
-.profilepage-graph .profilepage-graph__gmail{
+.move .profilepage-graph .profilepage-graph__gmail{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -758,7 +791,7 @@ profile-page
         width: 100%;
     }
 }
-.profilepage-graph .profilepage-graph__line{
+.move .profilepage-graph .profilepage-graph__line{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -774,7 +807,7 @@ profile-page
         width: 100%;
     }
 }
-.profilepage-graph .profilepage-graph__slack{
+.move .profilepage-graph .profilepage-graph__slack{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -790,7 +823,7 @@ profile-page
         width: 100%;
     }
 }
-.profilepage-graph .profilepage-graph__chatwork{
+.move .profilepage-graph .profilepage-graph__chatwork{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -806,7 +839,7 @@ profile-page
         width: 100%;
     }
 }
-.profilepage-graph .profilepage-graph__excel{
+.move .profilepage-graph .profilepage-graph__excel{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -822,7 +855,7 @@ profile-page
         width: 80%;
     }
 }
-.profilepage-graph .profilepage-graph__word{
+.move .profilepage-graph .profilepage-graph__word{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -838,7 +871,7 @@ profile-page
         width: 80%;
     }
 }
-.profilepage-graph .profilepage-graph__powerpoint{
+.move .profilepage-graph .profilepage-graph__powerpoint{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -854,7 +887,7 @@ profile-page
         width: 80%;
     }
 }
-.profilepage-graph .profilepage-graph__zoom{
+.move .profilepage-graph .profilepage-graph__zoom{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -870,7 +903,7 @@ profile-page
         width: 100%;
     }
 }
-.profilepage-graph .profilepage-graph__meet{
+.move .profilepage-graph .profilepage-graph__meet{
     height: 100%;
     background: #452e13;
     position: absolute;
@@ -1180,23 +1213,7 @@ thanks-page
     .mainvisual{
         display: block;
         width: 100%;
-        padding: 0 0 40px 0;
-    }
-    .mainvisual__list{
-        display: flex;
-        width: 100%;
-        overflow: hidden;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-    }
-    .mainvisual__item{
-        display: block;
-        width: 275px;
-    }
-    .mainvisual__item img{
-        width: 100%;
-        border-radius: 15px;
+        padding: 32px 0 24px 0;
     }
     .mainvisual__btn{
         display: flex;

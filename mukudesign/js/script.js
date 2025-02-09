@@ -10,12 +10,10 @@ $(function(){
     var flg = "off";
     $('.sp-nav__hamburger').on('click',function(){
         if(flg == "off"){
-            $('.logo').css("display","none");
             $('#hamburger__text').text('CLOSE');
             $(this).css("background-color","#452e13");
             flg = "on";
         }else{
-            $('.logo').css("display","block");
             $('#hamburger__text').text('MENU');
             $(this).css("background-color","#d8bf77");
             flg = "off";
@@ -24,15 +22,36 @@ $(function(){
 });
 
 //mv
-$(function(){
-    $('.slider').slick({
+$(function () {
+    $(".slider").slick({
+        arrows: true,
         autoplay: true,
+        adaptiveHeight: true,
         centerMode: true,
-        centerPadding: '0px',
-        autoplaySpeed: 5000,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
+        centerPadding: "33%",
+        slidesToShow: 1,
+        appendArrows: $('.mainvisual__btn'),
+        prevArrow: '<button class="mainvisual__btn--prev"><div class="btn-prev__inner mainvisual__btn--innner"><div class="btn btn__rotate"><span class="btn__prev-text--default">PREV</span><span class="btn__prev-text--fterRotate">PREV</span></div><div class="arrow-left"><img class="arrow-left__before" src="./img/btn_left.svg" alt="左矢印"><img class="arrow-left__after" src="./img/btn_left.svg" alt="左矢印"></div></div><div class="line-left"><div class="line-left__inner"></div></div></button>',
+        nextArrow: '<button class="mainvisual__btn--next"><div class="btn-next__inner mainvisual__btn--innner"><div class="btn btn__rotate"><span class="btn__next-text--default">NEXT</span><span class="btn__next-text--fterRotate">NEXT</span></div><div class="arrow-right"><img class="arrow-right__before" src="./img/btn_right.svg" alt="右矢印"><img class="arrow-right__after" src="./img/btn_right.svg" alt="右矢印"></div></div><div class="line-right"><div class="line-right__inner"></div></div></button>',
+        responsive: [
+            {
+            breakpoint: 768,
+            settings: {
+                arrows: true,
+                dots: true,
+                dotsClass: 'dots-wrap',
+                appendDots: $('.dots-box'),
+                autoplay: true,
+                adaptiveHeight: true,
+                centerMode: true,
+                centerPadding: "15%",
+                slidesToShow: 1,
+                appendArrows: $('.mainvisual__btn'),
+                prevArrow: '<button class="mainvisual__btn--prev"><div class="btn-prev__inner mainvisual__btn--innner"><div class="btn btn__rotate"><span class="btn__prev-text--default">PREV</span><span class="btn__prev-text--fterRotate">PREV</span></div><div class="arrow-left"><img class="arrow-left__before" src="./img/btn_left.svg" alt="左矢印"><img class="arrow-left__after" src="./img/btn_left.svg" alt="左矢印"></div></div><div class="line-left"><div class="line-left__inner"></div></div></button>',
+                nextArrow: '<button class="mainvisual__btn--next"><div class="btn-next__inner mainvisual__btn--innner"><div class="btn btn__rotate"><span class="btn__next-text--default">NEXT</span><span class="btn__next-text--fterRotate">NEXT</span></div><div class="arrow-right"><img class="arrow-right__before" src="./img/btn_right.svg" alt="右矢印"><img class="arrow-right__after" src="./img/btn_right.svg" alt="右矢印"></div></div><div class="line-right"><div class="line-right__inner"></div></div></button>',        
+            }
+            }
+        ]
     });
 });
 
@@ -70,20 +89,23 @@ $(document).ready(function() {
 });
 
 //graph
-$(document).ready(function(){
-    $(window).on('load scroll', function (){
-        SetScrollTiming('.ani');
+$(document).ready(function () {
+    $(window).on("load scroll", function () {
+        requestAnimationFrame(() => {
+            SetScrollTiming(".ani"); 
+        });
+        });
     });
-});
-function SetScrollTiming(target){
-    var box = $(target);
-    var animated = 'animated';
-    box.each(function(){
-        var boxOffset = $(this).offset().top;
+    function SetScrollTiming(target) {
+        var elements = $(target);
         var scrollPos = $(window).scrollTop();
-        var wh = $(window).height();
-        if(scrollPos > boxOffset - wh + 100 ){
-            $(this).addClass('move');
+        var windowHeight = $(window).height();
+    
+        elements.each(function () {
+        var offsetTop = $(this).offset().top;
+    
+        if (scrollPos > offsetTop - windowHeight + 100) {
+            $(this).addClass("move"); 
         }
     });
 }
